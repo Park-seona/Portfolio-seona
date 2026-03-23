@@ -1,0 +1,77 @@
+/* ===== (PC -> Tablet까지) 768px 이후 ~ ===== */
+@media screen and (min-width: 768px) {
+  .mobile_menu_toggle {
+       display: none;
+  }
+  
+  #mobile-nav,
+  .menu-overlay {
+    display: none;
+  }
+
+}
+
+
+
+/* ===== 1200px 이하 ===== */
+@media screen and (max-width: 1200px) {
+  
+}
+
+
+
+
+
+/* ===== 1024px 이하 (태블릿) ===== */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+
+
+/* ===== 768px 이하 (모바일 큰 화면) ===== */
+@media screen and (max-width: 768px) {
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    header {
+      grid-template-columns: auto 1fr auto;
+      height: 64px; 
+    }
+
+    header .mobile {
+      display: flex;
+      align-items: center;
+    }
+  
+    header .mobile button {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    .pc-nav {
+      display: none;
+    }
+
+    #mobile-nav header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    #mobile-nav #close {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+    }
+}

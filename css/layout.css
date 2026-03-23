@@ -1,0 +1,267 @@
+/* 1920px - 공통 CSS */
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* === 공통 타이틀 + 여백 === */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 24px; */
+    gap: 1.5rem;
+    text-align: center;
+
+    position: static;
+    /* margin: 80px auto 0; */
+}
+
+.section-title {
+    /* font-size: 32px; */
+    font-size: calc(var(--default-FZ)*2);
+    font-weight: 600;
+    color: #5642F1;
+}
+
+.section-header p {
+    /* font-size: 16px; */
+    font-size: var(--default-FZ);
+    font-weight: 500;
+}
+
+/* 햄버거 메뉴 */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(80%, 320px);
+  /* max-width: 280px; */
+  height: 100%;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px; */
+  
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  z-index: 1001;
+
+}
+
+#mobile-nav header {
+  padding: 0 0.875rem; 
+}
+
+/* 메뉴 open */
+body.menu_active #mobile-nav {
+  transform: translateX(0);
+}
+
+body.menu_active {
+  overflow: hidden;
+}
+
+/* 메뉴 리스트 */
+#mobile-nav nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mobile-nav nav li {
+  border-bottom: 1px solid #222;
+}
+
+#mobile-nav nav ul li:hover {
+  background: #5f4de9;
+}
+
+#mobile-nav nav ul li:hover a {
+  color: #fff;
+}
+
+#mobile-nav nav a {
+  font-size: calc(var(--default-FZ)*1.25);
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  display: block;
+
+  transition: 0.2s;
+}
+
+/* 오버레이 */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: var(--Blur, rgba(210, 210, 215, 0.45));
+  backdrop-filter: blur(3px);
+  
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s;
+
+  z-index: 1000;
+}
+
+/* 오버레이 - open */
+body.menu_active .menu-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* hover 효과 */
+#mobile-nav nav a:hover {
+  color: #6C5CE7; /* 포인트 컬러 */
+}
+
+
+#mobile-nav nav {
+  flex: 1;
+}
+
+#mobile-nav nav ul li {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 21px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--black);
+}
+
+#mobile-nav #close {
+  display: none;
+  background: none;
+  border: none;
+}
+
+
+
+/* ==---< 레이아웃 >---== */
+
+/* ====== Topbar ====== */
+header {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+header .mobile {
+  width: 40px;
+  height: 40px;
+}
+
+header .mobile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* header .mobile {
+  display: none;
+} */
+
+.topbar-inner {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 72px 1fr 72px;
+  align-items: center;
+  padding: 0 0.875rem;
+}
+
+/* 좌우 동일폭 */
+.topbar-slot {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--default-FZ)*1.375);
+}
+
+/* ====== Center Nav ====== */
+.pc-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+ul.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: calc(var(--default-FZ)*1.125);
+  font-weight: 700;
+  line-height: 1;
+  color: #27262F;
+
+  /* 부드러운 컬러 전환 */
+  transition: color 0.25s ease;
+}
+
+.nav-link.is-active {
+  color: #6C5AF4;
+}
+
+.nav-dot {
+  display: inline-block;  
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  background-color: #6C5AF4;
+  
+  border-radius: 50%;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.nav-link.is-active .nav-dot {
+  opacity: 1;
+}
+
+/* === 메인 배너 === */
+.main-card-slide {
+    background: #f5f4ff;
+    height: 100%;
+    min-height: 800px;
+}

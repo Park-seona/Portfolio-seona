@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="css/media.css" type="text/css">
+    <link rel="stylesheet" href="css/component.css" type="text/css">
+</head>
+<body>
+    <!-- (전체) 헤더 -->
+    <header>
+    <div class="topbar-inner">
+    
+    <!-- LEFT : 로고 -->
+    <a class="topbar-slot topbar-logo" href="#" aria-label="Home">
+      <!-- 로고는 이미지/SVG로 교체해도 OK -->
+        <img src="image/sa-logo.jpg" alt="로고" class="logo-mark">
+    </a>
+
+    <!-- CENTER -->
+    <nav class="pc-nav" aria-label="Primary">
+        <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link is-active" href="#">
+            <span class="nav-dot" aria-hidden="true"></span>
+            About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+            <span class="nav-dot" aria-hidden="true"></span>
+            Branding
+        </a>
+    </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+            <span class="nav-dot" aria-hidden="true"></span>
+                Portfolio
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+            <span class="nav-dot" aria-hidden="true"></span>
+                Process
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+            <span class="nav-dot" aria-hidden="true"></span>
+                Experience
+            </a>
+        </li>
+        </ul>
+    </nav>
+    
+    <!-- 모바일 : 햄버거 메뉴 아이콘 -->
+    <nav class="mobile">
+        <button class="mobile_menu_toggle">
+            <img src="image/mobile_toggle_btn.svg" alt="mobile toggle button">
+        </button>
+    </nav>
+
+   </div> <!-- topbar-inner 끝 -->
+
+    
+    </header>
+    
+    <!-- 모바일 메뉴 -->
+    <aside id="mobile-nav">
+        <header>
+            <button id="close">
+                <img src="image/mobile_menu_close.svg" alt="mobile menu close">
+            </button>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Branding</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Process</a></li>
+                <li><a href="">Experience</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- 모바일 블러창 -->
+    <div class="menu-overlay"></div>
+
+
+    <!-- 메인 배너 -->
+    <main>
+        <section class="main-card-slide">
+            <div class="container"></div>
+        </section>
+    </main>
+
+    <!-- js 불러오기 -->
+    <script src="js/script.js"></script>
+</body>
+</html>
