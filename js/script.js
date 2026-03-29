@@ -53,3 +53,32 @@ document.querySelector('#mobile-nav #close').addEventListener('click', function(
 document.querySelector('.menu-overlay').addEventListener('click', function() {
   document.body.classList.remove('menu_active');
 });
+
+
+// 카드 슬라이드
+
+// const swiper = new Swiper('.swiper', {
+//   effect: 'coverflow',
+//   coverflowEffect: {
+//     rotate: 30,
+//     slideShadows: false,
+//   },
+// });
+
+const swiperEl = document.querySelector('.hero-swiper');
+
+Object.assign(swiperEl, {
+  effect: 'coverflow',
+  centeredSlides: true,
+  slidesPerView: 'auto',
+
+  coverflowEffect: {
+    rotate: 30,
+    depth: 150,
+    stretch: 0,
+    modifier: 1,
+    slideShadows: false,
+  },
+});
+
+swiperEl.initialize();
