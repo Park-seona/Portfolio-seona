@@ -57,28 +57,76 @@ document.querySelector('.menu-overlay').addEventListener('click', function() {
 
 // 카드 슬라이드
 
-// const swiper = new Swiper('.swiper', {
-//   effect: 'coverflow',
-//   coverflowEffect: {
-//     rotate: 30,
-//     slideShadows: false,
-//   },
-// });
+const swiper = new Swiper(".hero-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 40,
+  loop: true,
 
-const swiperEl = document.querySelector('.hero-swiper');
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
-Object.assign(swiperEl, {
-  effect: 'coverflow',
-  centeredSlides: true,
-  slidesPerView: 'auto',
+  breakpoints: {
+    // 👉 모바일
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
 
-  coverflowEffect: {
-    rotate: 30,
-    depth: 150,
-    stretch: 0,
-    modifier: 1,
-    slideShadows: false,
+    // 👉 큰 모바일
+    480: {
+      slidesPerView: 1.4,
+      spaceBetween: 24,
+    },
+
+
+    // 👉 태블릿
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+
+    // 👉 PC
+    1024: {
+      slidesPerView: 2.2,
+      spaceBetween: 40,
+    },
+
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    }
   },
 });
 
-swiperEl.initialize();
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   new Swiper(".hero-swiper", {
+//     slidesPerView: 3,
+//     spaceBetween: 40,
+//     loop: true,
+
+//     autoplay: {
+//       delay: 2500,
+//       disableOnInteraction: false,
+//     },
+
+//     breakpoints: {
+//       0: {
+//         slidesPerView: 1.3,
+//         spaceBetween: 16,
+//       },
+
+//       768: {
+//         slidesPerView: 2,
+//         spaceBetween: 24,
+//       },
+
+//       1024: {
+//         slidesPerView: 3,
+//         spaceBetween: 40,
+//       }
+//     }
+//   });
+// });
