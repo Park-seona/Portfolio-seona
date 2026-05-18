@@ -164,6 +164,19 @@
 }
 
 @media screen and (max-width: 480px) {
+    .card-inner {
+      position: relative;
+    }
+
+    .title-wrap {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      font-size: var(--default-FZ);
+      color: #fff;
+      z-index: 100;
+    } 
+
     .card-text-02 {
       position: absolute;
       left: 10%;
@@ -176,6 +189,11 @@
       border-radius: 12px;
       font-size: calc(var(--default-FZ)*0.875);
     }
+
+    .btn-group .view-btn {
+      padding: 12px 96px;
+    }
+
 }
 
 

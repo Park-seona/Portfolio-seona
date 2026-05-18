@@ -287,7 +287,7 @@ ul.nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../image/card-box.svg) no-repeat center;
+  background: url(../image/card-img.svg) no-repeat center;
   background-size: 100% 100%;
   background-position: center;
   overflow: hidden;
@@ -410,6 +410,7 @@ ul.nav {
 .btn-group .view-btn {
   padding: 12px 116px;
 }
+
 .plus-btn {
   position: absolute;
   top: 50%;
