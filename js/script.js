@@ -63,7 +63,7 @@ const swiper = new Swiper(".hero-swiper", {
   loop: true,
 
   autoplay: {
-    delay: 2500,
+    delay: 2800,
     disableOnInteraction: false,
   },
 
